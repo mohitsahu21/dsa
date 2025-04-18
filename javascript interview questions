@@ -1,0 +1,191 @@
+Javascript-
+
+1. What are the different data types in JavaScript?
+2. What is the difference between null and undefined?
+3. what is closures?
+4. what is hoisting?
+5. difference in Let, Const and Var?
+6. What are the new Es6 and ES7 features?
+7. Explain rest, spread, and DE structuring in JS?
+8. Difference in map, reduce and filter?
+9. difference in Map and foreach?
+10. write polyfill for map function?
+11. what is call back function?
+12. Difference in splice and slice with example?
+13. what is error boundary?
+14. what is setTimeOut() and setTimeInterval()?
+15. How we can delete 1st [0th position] element of array ?
+16. What is axios and fetch and difference?
+17. What are promises in JavaScript?
+18. What is the purpose of async and await in JavaScript?
+19. what are call(), apply() and bind() methods?
+20. difference in == and ===?
+21. Explain the event queue in JavaScript?
+22. How javascript engine manages the memory?
+23. difference in normal function and fat arrow functions?(example -> const add = (2,3) =>{} vs function add(2,3){})
+24. what is this operator?
+25. What is the difference between local Storage and session Storage in JavaScript?
+26. How can you convert a string to lowercase in JavaScript?
+27. How can you check if an array includes a certain value in JavaScript?
+28. What is a generator function in JavaScript?
+29. What are the different ways to access an HTML element in JavaScript?
+30. What are the different ways to create objects in JavaScript?
+31. How can you remove duplicates in an array?
+32. What is the purpose of the window object in JavaScript?
+33. What would be the result of 3+2+”7″?
+34. What is event bubbling?
+35. shallow copy and deep copy
+
+
+Output based questions.
+let x = '{ "b": 1, "c": 2 }'; 
+let y = JSON.parse(x); 
+console.log(typeof y); 
+1.
+let number = 0;
+console.log(number++);
+console.log(++number);
+console.log(number);
+/***********************/
+2.
+let x = 0.1 + 0.2; 
+let y = 0.3; 
+console.log(x == y); 
+/***********************/
+3.
+let x = false; 
+let y = "0"; 
+let z = 0;   
+console.log(x == y); 
+console.log(x == z); 
+/**********************/
+function func1(){
+  setTimeout(()=>{
+    console.log(x);
+    console.log(y);
+  },3000);
+
+  var x = 2;
+  let y = 12;
+}
+func1();
+
+//***********
+function func2(){
+  for(var i = 0; i < 3; i++){
+    setTimeout(()=> console.log(i),2000);
+}
+}
+func2();
+
+/**************/
+(function(){
+  setTimeout(()=> console.log(1),2000);
+  console.log(2);
+  setTimeout(()=> console.log(3),0);
+  console.log(4);
+})();
+
+rotateRight([2, 3, 4, 5, 7], 3); // Return [4,5,7,2,3]
+Rotate above array n number of times.
+
+/**/
+function func1(){
+  setTimeout(()=>{
+    console.log(x);
+    console.log(y);
+  },3000);
+
+  var x = 2;
+  let y = 12;
+}
+func1();
+
+
+1. const arr= ['a','f','r','t','a','f','r','m','z','s','r','m','z','n'] // {a:2, f:2,r:3,t:1,m:2.....}
+finds the duplicates and arrange it in object with key value pair.
+2. Reverse each word in the sentence- 'Welcome to this javaScript' -> 'emocleW ot siht tpircSavaj'
+3. Write a Mul function -> mul(2)(4)(3) //output 24
+4. Write a JavaScript program to find the maximum number in an array. 
+5. Write a JavaScript function to check if a given string is a palindrome (reads the same forwards and backwards)
+6. Write a JavaScript program to reverse a given string. 
+7. Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers. 
+8. Write a JavaScript program to find the largest element in a nested array. 
+9. convert it to flat array -> [1,2,3,[5,6,[1,2]],[7],9,[10,[11,[12,[13]]]]] //output [1,2,3,5,6,1,2,7,9,10,11,12,13]
+10. Write a recursive function to calculate the factorial of a given number. 
+11. Write a function that determines if two strings are anagrams of each other 
+
+
+React js interview questions ->
+
+1. what is react js?
+2. explain DOM functionality in REACT.
+ 2a. How Does React Handle DOM Manipulation?
+3. Why it is called SPA?
+4. What Are the Benefits of Using React?
+5. What Is JSX?
+6. What Is the Difference Between State and Props in React?
+  6a.  Explain the Concept of Prop Drilling in React.
+7. What Are React Hooks? Explain some hooks that you have used in ur project?
+8. What Is the Difference Between the “useEffect” and “useState” Hooks in React?
+9. How Do You Handle Errors in React?
+10. What Are Synthetic Events in React?
+11.  In React, Why Is There a Need for Using Keys in Lists?
+12. What Are the Rules for Using Hooks in React?
+13. What Are Some Examples of Frameworks and Libraries That Can Be Used With React?
+14. How Do You Optimize the Rendering of Large Lists in React?
+15. what is LazyLoading?
+16. How do u handle pagination in react?
+17. What Are Fragments in React?
+18. How Do You Optimize Performance in React?
+19. How many ways are there to style the react component?
+20. Difference b/w component and Element?
+21. What is HOC in React? Write a syntax and real time use of it?
+22. What do u do for state management in ur project?
+23. Explain different lifecycle methods of react? 
+24. How we can achieve all lifecycle of react using useEffect?
+25. useCallBack() and useMemo()?
+26. what is memo()?
+27. what are the controlled and uncontrolled components?
+28. what is useRef() explain with example?
+29. stateless and state full component?
+30. What Is the Difference Between a Pure Component and a Regular Component in React?
+31. what is shouldComponentUpdate().
+32. How can we stop rendering of child component unnecessarily?
+33. How Do You Pass Data Between Components in React?
+34. What Is Redux and What Problem Does It Solve in a React Application?
+35. What Are the Three Principles of Redux?
+36. What Is React Router, and What Problem Does It Solve in React?
+37.  How Do You Define Routes in React Router?
+38. How Do You Handle Nested Routes in React Router?
+39. How Would You Perform Automatic Redirect With React Router?
+40. What Are the Different Ways to Style a React Component?
+41. What Is CSS Modules, and How Does It Work in React?
+42. What Is Styled Components in React?
+
+Coadding -
+1. Write React Code That Displays a Button With the Text “Click Me” and Logs a Message to the Console When Clicked.
+2. Write React Code That Displays the items fetched from an API.
+3. Write React Code That Allows a User to Filter a List of Items Based on a Search Term.
+
+
+
+API- https://dummy.restapiexample.com/api/v1/employees
+https://datausa.io/api/data?drilldowns=Nation&measures=Population
+
+You have been referred by Vipin Sahu.
+You will get call from your HR if your CV matches the requirements. 
+
+Thanks & Regards,
+
+Vipin Sahu
+
+Technical Lead
+
+Wipro IT corporation INDIA.
+
+Mobile: +91 8087157695
+Mail to: vipinsahu1990@gmail.com
+Web   : https://www.wipro.com/en-IN/
+LinkedIn : My LinkedIn Profile
+Please note: The information contained in this message may be legally privileged and confidential and protected from disclosure. If the reader of this message is not the intended recipient, you are hereby notified that any unauthorized use,distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please notify us immediately by replying to the message and deleting it from your computer. Thank You.
