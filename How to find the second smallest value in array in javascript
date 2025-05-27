@@ -1,0 +1,41 @@
+Q1 = how to find the second smallest value in array in javascript?
+
+solution = Method 1: Using Sorting
+
+function findSecondSmallest(arr) { const uniqueSorted = [...new Set(arr)].sort((a, b) => a - b); return uniqueSorted.length >= 2 ? uniqueSorted[1] : null; }
+
+console.log(findSecondSmallest([5, 1, 2, 1, 3])); // Output: 2
+
+explaination - new Set(arr) removes duplicates.
+
+.sort((a, b) => a - b) sorts in ascending order.
+
+[1] gets the second element.
+
+Method 2: Without Sorting (Efficient for large arrays)
+
+function findSecondSmallest(arr) { let min = Infinity; let secondMin = Infinity;
+
+for (let num of arr) { if (num < min) { secondMin = min; min = num; } else if (num < secondMin && num !== min) { secondMin = num; } }
+
+return secondMin !== Infinity ? secondMin : null; }
+
+console.log(findSecondSmallest([5, 1, 2, 1, 3])); // Output: 2
+
+explaination -
+
+This approach avoids sorting and works in O(n) time.
+
+It handles duplicates and finds the second distinct smallest value.
+
+Method 3: Using Math.min + filter
+
+function findSecondSmallest(arr) { const min = Math.min(...arr); const filtered = arr.filter(num => num !== min); return filtered.length ? Math.min(...filtered) : null; }
+
+console.log(findSecondSmallest([5, 1, 2, 1, 3])); // Output: 2
+
+explaination - First, we find the smallest using Math.min.
+
+Then we filter out all occurrences of that smallest value.
+
+Finally, we find the min of the remaining values.
