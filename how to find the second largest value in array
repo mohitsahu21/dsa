@@ -1,0 +1,23 @@
+Q3- how to find the second largest value in array?
+
+Method 1: Without sorting (Efficient way)
+
+function findSecondLargest(arr) { let max = -Infinity; let secondMax = -Infinity;
+
+for (let num of arr) { if (num > max) { secondMax = max; max = num; } else if (num < max && num > secondMax) { secondMax = num; } }
+
+return secondMax !== -Infinity ? secondMax : null; }
+
+console.log(findSecondLargest([5, 1, 2, 7, 3])); // Output: 5
+
+Method 2: With sorting (Simpler, less efficient for big arrays)
+
+function findSecondLargest(arr) { const uniqueSorted = [...new Set(arr)].sort((a, b) => b - a); return uniqueSorted.length >= 2 ? uniqueSorted[1] : null; }
+
+console.log(findSecondLargest([5, 1, 2, 7, 3])); // Output: 5
+
+Method 3: Using Math.max and filter
+
+function findSecondLargest(arr) { const max = Math.max(...arr); const filtered = arr.filter(num => num !== max); return filtered.length ? Math.max(...filtered) : null; }
+
+console.log(findSecondLargest([5, 1, 2, 7, 3])); // Output: 5
